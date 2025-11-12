@@ -23,34 +23,34 @@ const ArrowRight = () => (
 
 const Hero = () => {
   return (
-    // Main container: Dark theme, subtle blue glow shadow
-    <div className="max-w-7xl mx-auto my-12 overflow-hidden rounded-xl shadow-2xl shadow-blue-700/20">
+    // Main container: Cute minimalist style with soft shadow
+    <div className="max-w-7xl mx-auto my-12 overflow-hidden rounded-2xl shadow-lg shadow-violet-200/30">
       {/* Flex container for the 2-column layout. Col on mobile, row on desktop */}
-      <div className="flex flex-col lg:flex-row bg-slate-900">
+      <div className="flex flex-col lg:flex-row bg-gradient-to-br from-violet-50 via-purple-50 to-blue-50">
         {/* Left Section (Text Content) */}
         <div className="w-full lg:w-1/2 flex items-center justify-center p-12 lg:p-16">
           {/* Content wrapper for text alignment and spacing */}
-          <div className="text-slate-200 text-center lg:text-left">
+          <div className="text-gray-700 text-center lg:text-left">
             {/* "MY WORK" pre-header with accent color */}
             <div className="flex items-center justify-center lg:justify-start gap-3">
-              <span className="w-10 h-0.5 bg-blue-500"></span>
-              <span className="font-semibold text-sm text-blue-400 tracking-wider uppercase">
+              <span className="w-10 h-0.5 bg-violet-400"></span>
+              <span className="font-semibold text-sm text-violet-500 tracking-wider uppercase">
                 MY WORK
               </span>
             </div>
 
-            {/* Main Headline - White text on dark bg */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white my-4 tracking-tight leading-tight">
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 my-4 tracking-tight leading-tight">
               MY PORTFOLIO
             </h1>
-            <p className="text-slate-400 text-lg mb-8">
+            <p className="text-gray-600 text-lg mb-8">
               I build modern web applications and love to create music.
             </p>
 
-            {/* Call to Action Button - Blue accent color */}
+            {/* Call to Action Button - Pink accent */}
             <a
-              href="#projects" // Point this to your projects section
-              className="group inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-500 transition-all duration-300 transform hover:scale-105"
+              href="#projects"
+              className="group inline-flex items-center justify-center px-8 py-3 bg-violet-500 text-white font-semibold rounded-lg shadow-md hover:bg-violet-600 transition-all duration-300 transform hover:scale-105"
             >
               VIEW PROJECTS
               <ArrowRight />
@@ -60,18 +60,14 @@ const Hero = () => {
 
         {/* Right Section (Image) */}
         <div className="w-full lg:w-1/2 h-64 lg:h-auto">
-          {/* Using a placeholder image here. 
-            Replace 'src' with your own high-quality image.
-            object-cover ensures the image fills the space without distortion.
-          */}
           <img
-            src="https://placehold.co/800x800/1e293b/ffffff?text=My+Projects"
+            src="https://placehold.co/800x800/f3e8ff/d8b4fe?text=My+Projects"
             alt="Portfolio projects"
             className="w-full h-full object-cover object-center"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src =
-                'https://placehold.co/800x800/cccccc/969696?text=Image+Not+Found';
+                'https://placehold.co/800x800/e9d5ff/c084fc?text=Image+Not+Found';
             }}
           />
         </div>

@@ -4,10 +4,10 @@ import LatestProducts from '../components/LatestProducts'
 
 const Home = () => {
   return (
-    <div>
-      <LatestProducts/>
+    <>
       <Hero/>
-    </div>
+      <LatestProducts/>
+    </>
   )
 }
 

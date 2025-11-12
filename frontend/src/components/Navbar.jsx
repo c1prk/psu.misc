@@ -88,8 +88,8 @@ const Navbar = () => {
   const getNavLinkClass = ({ isActive }) => {
     return `flex flex-col items-center gap-1 group ${
       isActive
-        ? 'text-white font-semibold'
-        : 'text-slate-300 hover:text-blue-400 transition-colors'
+        ? 'text-violet-500 font-semibold'
+        : 'text-gray-600 hover:text-violet-400 transition-colors'
     }`;
   };
 
@@ -97,16 +97,16 @@ const Navbar = () => {
   const getHrClass = (isActive) => {
     return `w-2/4 border-none h-[2px] transition-all ${
       isActive
-        ? 'bg-blue-500'
-        : 'bg-transparent group-hover:bg-blue-400/50'
+        ? 'bg-violet-500'
+        : 'bg-transparent group-hover:bg-violet-300/50'
     }`;
   };
 
   return (
-    // Main navbar container: Added a subtle bottom border and a blue glow shadow
-    <div className="flex items-center justify-between py-5 font-medium bg-slate-900 px-4 md:px-8 shadow-lg shadow-blue-500/10 border-b border-slate-700/50">
+    // Main navbar container: Cute minimalist style with soft shadow
+    <div className="flex items-center justify-between py-5 font-medium bg-white px-4 md:px-8 shadow-sm border-b border-violet-100">
       {/* Replaced img src={assets.logo} with a text logo */}
-      <Link to="/" className="text-white text-2xl font-bold tracking-tight">
+      <Link to="/" className="text-gray-800 text-2xl font-bold tracking-tight">
         LOGO
       </Link>
 
